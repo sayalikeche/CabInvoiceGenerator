@@ -55,9 +55,24 @@ namespace CabInvoiceGenerator
             {
                 return totalFare;
             }
+             InvoiceSummary CalculateInvoiceSummary(Ride[] ride)
+            {
+                double totalFare = this.CalculateMultipleRideFair(ride);
+                InvoiceSummary summary = new InvoiceSummary();
+                summary.totalFare = totalFare;
+                summary.totalNumberOfRides = ride.Count();
+                summary.CalulateAverageFare();
+                return summary;
+
+            }
         }
+
+
+
     }
 }
+    
+
         
     
 
