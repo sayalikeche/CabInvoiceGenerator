@@ -35,5 +35,7 @@ namespace CabInvoiceGenerator
                 return TotalFare;
             }
         }
+
+        
     }
 }
